@@ -8,8 +8,12 @@ public class MarketUIManager : MonoBehaviour
     public GameObject fishButtonPrefab;
     public Transform fishButtonParent;
     public GameObject detailPanel;
+    public TextMeshProUGUI fishNameText; // Add this field for fish name
+    public Image fishImage; // Add this field for fish image
     public TextMeshProUGUI fishValueText;
     public Button sellButton;
+    public GameObject dialogueBox;
+    public TextMeshProUGUI dialogueText;
 
     private FishData currentFish;
 
@@ -17,26 +21,39 @@ public class MarketUIManager : MonoBehaviour
     {
         PopulateFishButtons();
         detailPanel.SetActive(false); // Hide detail panel initially
-
-
+        dialogueBox.SetActive(false); // Hide dialogue box initially
     }
-
-
 
     void PopulateFishButtons()
     {
-        foreach (FishData fish in InventoryManager.Instance.GetFishInventory())
+        List<FishData> fishInventory = InventoryManager.Instance.GetFishInventory();
+
+        if (fishInventory.Count == 0)
+        {
+            dialogueText.text = "You need to catch fish to sell me one hahaha";
+            dialogueBox.SetActive(true);
+            return;
+        }
+
+        foreach (FishData fish in fishInventory)
         {
             GameObject fishButtonObject = Instantiate(fishButtonPrefab, fishButtonParent);
             FishButton fishButton = fishButtonObject.GetComponent<FishButton>();
+
             fishButton.Initialize(fish, OnFishButtonClicked);
         }
-    }
 
+        if (fishButtonPrefab != null)
+        {
+            Destroy(fishButtonPrefab);
+        }
+    }
 
     void OnFishButtonClicked(FishData fish)
     {
         currentFish = fish;
+        fishNameText.text = fish.Fish.fishName; // Display fish name
+        fishImage.sprite = fish.Fish.fishIcon; // Display fish image
         fishValueText.text = $"Value: {fish.Value}";
         detailPanel.SetActive(true);
         sellButton.onClick.RemoveAllListeners();
@@ -63,5 +80,4 @@ public class MarketUIManager : MonoBehaviour
             }
         }
     }
-
 }

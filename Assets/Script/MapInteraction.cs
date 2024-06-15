@@ -24,6 +24,14 @@ public class MapInteraction : MonoBehaviour
     }
     public void GoToBoatScene()
     {
-        SceneManager.LoadScene("Boat");
+        SceneManager.LoadScene("BoatUpgrade");
+    }
+    public void GoToDockScene()
+    {
+        SceneManager.LoadScene("Dock");
+    }
+    public void GoToVillageScene()
+    {
+        SceneManager.LoadScene("Village");
     }
 }

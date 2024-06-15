@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -20,38 +20,42 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddFish(FishData fish)
+    public void AddFish(FishSo fishSo, float value)
     {
-        fishInventory.Add(fish);
-       
+        FishData fishData = new FishData
+        {
+            Fish = fishSo,
+            Value = value,
+            FishSprite = fishSo.fishSprite // Assign the sprite from FishSo
+        };
+        fishInventory.Add(fishData);
     }
 
     public List<FishData> GetFishInventory()
     {
         return new List<FishData>(fishInventory);
-
     }
+
     public void RemoveFish(FishData fish)
     {
         fishInventory.Remove(fish);
-        
     }
-
 }
 
-
-
-
 [System.Serializable]
-
 public struct FishData
 {
     public FishSo Fish;
     public float Value;
+    public Sprite FishSprite;
+    public string FishName;
 
     public void SetValue(float value, FishSo fish)
     {
         Value = value;
         Fish = fish;
+        FishSprite = fish.fishSprite; // Assuming fishSo has a sprite field
+        FishName = fish.fishName; // Assuming fishSo has a name field
     }
 }
+

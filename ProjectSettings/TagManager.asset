@@ -43,3 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1sky
+    uniqueID: 3199352787
+    locked: 0
+  - name: 2cloud
+    uniqueID: 2764964627
+    locked: 0
+  - name: 3Backgroun
+    uniqueID: 2181965273
+    locked: 0
+  - name: water
+    uniqueID: 1005870723
+    locked: 0

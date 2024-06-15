@@ -7,14 +7,15 @@ using UnityEngine.UI;
 
 public class HookController : MonoBehaviour
 {
+    public static HookController instance;
+
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float descendSpeed;
     [SerializeField] private float ascendSpeed;
-    [SerializeField] private float descendDistance;
     [SerializeField] private float pauseDuration;
-    public static HookController instance;
-    [SerializeField] private float CurrentWeight;
-    [SerializeField] private float MaxWeight;
+    public float descendDistance;  // Make public for GearUpgradeManager to modify
+    public float MaxWeight;        // Make public for GearUpgradeManager to modify
+    private float CurrentWeight;
 
     [SerializeField] private TextMeshProUGUI descendDistanceText;
     [SerializeField] private TextMeshProUGUI fishCounterText;
@@ -27,6 +28,13 @@ public class HookController : MonoBehaviour
     [SerializeField] private GameObject fishScrollViewContent;
     [SerializeField] private GameObject fishItemPrefab;
 
+    // UI elements for fight back mechanic
+    [SerializeField] private Slider fightBackMeter;
+    [SerializeField] private float fightBackThreshold = 10f;
+    private bool isFightingBack = false;
+    private bool fightBackCompleted = false;  // Add this flag
+    private float fightBackValue = 0f;
+
     private float initialYPosition;
     private float deepestDepth = 0f;
     private bool isDescending = false;
@@ -37,6 +45,12 @@ public class HookController : MonoBehaviour
 
     private int totalValue = 0;
     private int fishCount = 0;
+
+    // Define maxDepths and maxWeights here
+    public float[] maxDepths = { 0f, 50f, 200f, 400f, 508f };
+    public int[] maxWeights = { 0, 1000, 2000, 3000, 5000 };
+
+    [SerializeField] private Vector2 hookAttachmentOffset; // Add this line for the offset
 
     void Awake()
     {
@@ -49,11 +63,26 @@ public class HookController : MonoBehaviour
         returnToMapButton.gameObject.SetActive(false);
         returnToMapButton.onClick.AddListener(ReturnToMap);
 
+        fishCounterText.enabled = true;
+        descendDistanceText.enabled = true;
         resultsPanel.SetActive(false);
+        fightBackMeter.gameObject.SetActive(false);
+
+        // Initialize values based on stored levels
+        MaxWeight = maxWeights[GameManager.Instance.rodLevel];
+        descendDistance = maxDepths[GameManager.Instance.lineLevel];
     }
+
+    // Other methods remain unchanged...
 
     void Update()
     {
+        if (isFightingBack)
+        {
+            HandleFightBack();
+            return;
+        }
+
         if (!isDescending)
         {
             if (Input.GetKeyDown(KeyCode.S))
@@ -65,6 +94,34 @@ public class HookController : MonoBehaviour
         {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float horizontalMovement = horizontalInput * horizontalSpeed * Time.deltaTime;
+
+            // Apply tackle level effects
+            switch (GameManager.Instance.tacLevel)
+            {
+                case 1:
+                    // No additional effect
+                    break;
+                case 2:
+                    horizontalMovement *= 3;  // Increase horizontal speed by 3x
+                    break;
+                case 3:
+                    // Handle blackout image removal
+                    // Assumes you have a reference to the blackout image and its removal logic
+                    // For example:
+                    // blackoutImage.SetActive(false);
+                    break;
+                case 4:
+                    if (Input.GetKey(KeyCode.C))
+                    {
+                        canCatchFish = false;
+                    }
+                    else
+                    {
+                        canCatchFish = true;
+                    }
+                    break;
+            }
+
             transform.Translate(Vector3.right * horizontalMovement);
 
             float descendMovement = descendSpeed * Time.deltaTime;
@@ -89,16 +146,23 @@ public class HookController : MonoBehaviour
         }
         else if (!isPaused)
         {
-            float ascendMovement = ascendSpeed * Time.deltaTime;
-            transform.Translate(Vector3.up * ascendMovement);
-
-            if (transform.position.y >= initialYPosition)
+            // Check if halfway through the ascent and fight back not completed
+            if (transform.position.y >= initialYPosition - descendDistance / 2f && !fightBackCompleted)
             {
-                isPaused = true;
+                isFightingBack = true;
+                fightBackMeter.gameObject.SetActive(true);
+            }
+            else
+            {
+                float ascendMovement = ascendSpeed * Time.deltaTime;
+                transform.Translate(Vector3.up * ascendMovement);
 
-                returnToMapButton.gameObject.SetActive(true);
-
-                StartCoroutine(HandleFishPositions());
+                if (transform.position.y >= initialYPosition)
+                {
+                    isPaused = true;
+                    returnToMapButton.gameObject.SetActive(true);
+                    StartCoroutine(HandleFishPositions());
+                }
             }
         }
         else
@@ -111,11 +175,29 @@ public class HookController : MonoBehaviour
                 isDescending = false;
                 isAscending = false;
                 canCatchFish = true;  // Re-enable catching fish after the pause
+                fightBackCompleted = false;  // Reset the fight back flag for the next descent
             }
         }
 
         UpdateFishCounter();
         UpdateDepthCounter();
+    }
+
+    private void HandleFightBack()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            fightBackValue += 1f;
+            fightBackMeter.value = fightBackValue / fightBackThreshold;
+
+            if (fightBackValue >= fightBackThreshold)
+            {
+                isFightingBack = false;
+                fightBackCompleted = true;
+                fightBackMeter.gameObject.SetActive(false);
+                fightBackValue = 0f;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -128,11 +210,30 @@ public class HookController : MonoBehaviour
                 if (fish != null)
                 {
                     fish.isCatch = true;
-                    Vector3 fishPosition = fish.transform.position;
-                    fishPosition.x = transform.position.x;
-                    fish.transform.position = fishPosition;
+
+                    // Change the body type to Dynamic to allow physics interaction
+                    fish.fishRigidbody.bodyType = RigidbodyType2D.Dynamic;
+
+                    Vector3 hookPosition = transform.position;
+
+                    // Align the fish's mouth to the hook with an offset
+                    if (fish.mouthTransform != null)
+                    {
+                        Vector3 mouthOffset = fish.mouthTransform.position - fish.transform.position;
+                        fish.transform.position = hookPosition - mouthOffset + (Vector3)hookAttachmentOffset;
+                    }
+                    else
+                    {
+                        fish.transform.position = hookPosition + (Vector3)hookAttachmentOffset;
+                    }
+
                     fish.transform.parent = this.transform;
-                    fish.FreezePosition();
+
+                    // Add a hinge joint to simulate the physics
+                    HingeJoint2D hingeJoint = fish.gameObject.AddComponent<HingeJoint2D>();
+                    hingeJoint.connectedBody = GetComponent<Rigidbody2D>();
+                    hingeJoint.anchor = fish.mouthTransform.localPosition;
+
                     CurrentWeight += fish.weight;
                     totalValue += fish.value;
                     fishCount++;
@@ -184,12 +285,14 @@ public class HookController : MonoBehaviour
                 fishPosition.y -= 2f;
                 fishPosition.x += offsetX;
                 fish.position = fishPosition;
-                FishMovement fishMovement = fish.GetComponent<FishMovement>();
                 fishCount++;
             }
         }
 
         Debug.Log("Total value: $" + totalValue);
+
+        fishCounterText.enabled = false;
+        descendDistanceText.enabled = false;
 
         resultsPanel.SetActive(true);
 
@@ -211,9 +314,10 @@ public class HookController : MonoBehaviour
 
                 if (fishImage != null && fishSpriteRenderer != null)
                 {
-                    FishData fishdata = new FishData();
-                    fishdata.SetValue(fish.GetComponent<FishMovement>().value, fish.GetComponent<FishMovement>().fishso);
-                    InventoryManager.Instance.AddFish(fishdata);
+                    FishMovement fishMovement = fish.GetComponent<FishMovement>();
+                    FishData fishData = new FishData();
+                    fishData.SetValue(fishMovement.value, fishMovement.fishso);
+                    InventoryManager.Instance.AddFish(fishMovement.fishso, fishMovement.value); // Corrected line
                     fishImage.sprite = fishSpriteRenderer.sprite;
                     Debug.Log("Added fish to results: " + fish.name);
                 }
