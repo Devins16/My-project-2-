@@ -286,14 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b599183eb931b4e940acab68b0e591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  nextButton: {fileID: 0}
-  currentIndex: 0
-  helpContents:
-  - 'Control 1: Use WASD to move.'
-  - 'Control 2: Use Space to jump.'
-  - 'Control 3: Use Mouse to look around.'
-  - 'Control 4: Press E to interact.'
 --- !u!114 &138299625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1046,7 +1038,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.380466, y: 1.8280599, z: -12.23}
+  m_LocalPosition: {x: -15.368396, y: 2.87608, z: -12.23}
   m_LocalScale: {x: 0.40519285, y: 0.2733716, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1414,7 +1406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282438384830233660, guid: 137c776c264782842b36085ff7e07191, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 2282438384830233660, guid: 137c776c264782842b36085ff7e07191, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2577,18 +2569,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2352457, y: 0.09421992}
+  m_Offset: {x: -0.2352457, y: -2.556448}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.37, y: 2.09}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 10.34, y: 7.19}
+    newSize: {x: 10.34, y: 7.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.94161, y: 2.328782}
+  m_Size: {x: 9.94161, y: 0.98424053}
   m_EdgeRadius: 0
 --- !u!50 &1241118447
 Rigidbody2D:
@@ -2658,12 +2650,12 @@ SpriteRenderer:
   m_SortingLayerID: 1005870723
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fab384697b4f4e548ad200416e662aec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9da9d57e298c63649a752af857b9a46c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.34, y: 7.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2678,7 +2670,7 @@ Transform:
   m_GameObject: {fileID: 1241118445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.1, y: -1.9085, z: -2.23}
+  m_LocalPosition: {x: -25.22, y: -0.86, z: -2.23}
   m_LocalScale: {x: 0.60380423, y: 0.57396364, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2701,10 +2693,10 @@ MonoBehaviour:
   moveSpeed: 5
   waveFrequency: 5
   waveAmplitude: 1
-  normalBoatSprite: {fileID: 21300000, guid: fab384697b4f4e548ad200416e662aec, type: 3}
-  superBoatSprite: {fileID: 21300000, guid: c05640f2ad43bdb4eb565ceac2439c79, type: 3}
-  rareBoatSprite: {fileID: 21300000, guid: 428591af1c7ead544890c4f99276b66b, type: 3}
-  legendaryBoatSprite: {fileID: 21300000, guid: 17ad5985f6d368a43a811bb6d0513646, type: 3}
+  normalBoatSprite: {fileID: 21300000, guid: 9da9d57e298c63649a752af857b9a46c, type: 3}
+  superBoatSprite: {fileID: 21300000, guid: 7ef997e12c4e3bd4fa71b3cec893d11e, type: 3}
+  rareBoatSprite: {fileID: 21300000, guid: 75951a69caaca714db8cca304743f2ef, type: 3}
+  legendaryBoatSprite: {fileID: 21300000, guid: ac49d8a1b0acbf947b95fec17835c2ba, type: 3}
   BubbleRight: {fileID: 50799471}
   BubbleLeft: {fileID: 440204200}
 --- !u!114 &1241118451
@@ -2755,26 +2747,26 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -5.3181043, y: 1.9663968}
-  - {x: -6.076279, y: 2.669759}
-  - {x: -6.907167, y: 2.5371213}
-  - {x: -7.0528016, y: 2.0351765}
-  - {x: -6.707067, y: 1.0924426}
-  - {x: -6.194307, y: -0.5394826}
-  - {x: -6.0362763, y: -0.9364052}
-  - {x: -5.24297, y: -1.3563604}
-  - {x: -3.2164202, y: -1.6325734}
-  - {x: -0.89619684, y: -1.7354472}
-  - {x: 2.5299628, y: -1.6848133}
-  - {x: 5.076724, y: -1.3343978}
-  - {x: 5.807842, y: -1.0871387}
-  - {x: 6.233976, y: -0.19783139}
-  - {x: 6.29013, y: 0.69856596}
-  - {x: 6.3869157, y: 1.4089363}
-  - {x: 6.4253507, y: 1.7724642}
-  - {x: 5.9617968, y: 1.9813161}
-  - {x: 5.8137264, y: 1.6522582}
-  - {x: -5.331253, y: 1.98363}
+  - {x: -5.0681043, y: -1.5336032}
+  - {x: -5.2363915, y: -1.8056448}
+  - {x: -5.1543517, y: -2.5145144}
+  - {x: -5.039017, y: -2.588221}
+  - {x: -4.8382373, y: -3.1642523}
+  - {x: -4.037912, y: -3.3539653}
+  - {x: -3.6293159, y: -3.5131695}
+  - {x: -2.8877697, y: -3.4573088}
+  - {x: -0.6405798, y: -3.560182}
+  - {x: 2.639516, y: -3.375095}
+  - {x: 4.2533617, y: -3.4816322}
+  - {x: 5.1132407, y: -1.5456828}
+  - {x: 4.6989417, y: -1.2919973}
+  - {x: 3.7994096, y: -1.5097088}
+  - {x: 2.6005368, y: -1.6960351}
+  - {x: 0.17354155, y: -1.5871553}
+  - {x: -1.7381053, y: -1.4914324}
+  - {x: -3.6898446, y: -1.3391896}
+  - {x: -4.518569, y: -1.3992462}
+  - {x: -5.1413593, y: -1.7090964}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3686,7 +3678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2282438384830233660, guid: 137c776c264782842b36085ff7e07191, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 2282438384830233660, guid: 137c776c264782842b36085ff7e07191, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3798,7 +3790,7 @@ Transform:
   m_GameObject: {fileID: 2061785103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.1, y: 1.8635004, z: -12.23}
+  m_LocalPosition: {x: -25.22, y: 2.9120002, z: -12.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
