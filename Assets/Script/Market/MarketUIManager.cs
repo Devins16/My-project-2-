@@ -8,12 +8,14 @@ public class MarketUIManager : MonoBehaviour
     public GameObject fishButtonPrefab;
     public Transform fishButtonParent;
     public GameObject detailPanel;
-    public TextMeshProUGUI fishNameText; 
-    public Image fishImage; 
+    public TextMeshProUGUI fishNameText;
+    public Image fishImage;
     public TextMeshProUGUI fishValueText;
     public Button sellButton;
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
+
+    public AudioSource sellFishSFX;  // Reference to the AudioSource component
 
     private FishData currentFish;
 
@@ -21,7 +23,7 @@ public class MarketUIManager : MonoBehaviour
     {
         PopulateFishButtons();
         detailPanel.SetActive(false);
-        dialogueBox.SetActive(false); 
+        dialogueBox.SetActive(false);
     }
 
     void PopulateFishButtons()
@@ -52,8 +54,8 @@ public class MarketUIManager : MonoBehaviour
     void OnFishButtonClicked(FishData fish)
     {
         currentFish = fish;
-        fishNameText.text = fish.Fish.fishName; 
-        fishImage.sprite = fish.Fish.fishIcon; 
+        fishNameText.text = fish.Fish.fishName;
+        fishImage.sprite = fish.Fish.fishIcon;
         fishValueText.text = $"Value: {fish.Value}";
         detailPanel.SetActive(true);
         sellButton.onClick.RemoveAllListeners();
@@ -63,9 +65,15 @@ public class MarketUIManager : MonoBehaviour
     void OnSellButtonClicked()
     {
         InventoryManager.Instance.RemoveFish(currentFish);
-        GameManager.Instance.AddMoney(currentFish.Value); 
+        GameManager.Instance.AddMoney(currentFish.Value);
         detailPanel.SetActive(false);
-        DestroyFishButton(currentFish); 
+        DestroyFishButton(currentFish);
+
+        // Play the sell sound effect
+        if (sellFishSFX != null)
+        {
+            sellFishSFX.Play();
+        }
     }
 
     void DestroyFishButton(FishData fish)
