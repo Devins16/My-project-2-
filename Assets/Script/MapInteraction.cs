@@ -1,37 +1,53 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MapInteraction : MonoBehaviour
 {
-   
+    public AudioSource src;
+    public AudioClip buttonClip;
+    public float delayBeforeSceneChange = 1f; // Adjust this delay based on your SFX length
+
     public void GoToBoatingScene()
     {
-        SceneManager.LoadScene("Boating"); 
+        StartCoroutine(PlaySFXAndChangeScene("Boating"));
     }
 
     public void GoToMarketScene()
     {
-        SceneManager.LoadScene("Market");
+        StartCoroutine(PlaySFXAndChangeScene("Market"));
     }
 
     public void GoToMapScene()
     {
-        SceneManager.LoadScene("Map");
+        StartCoroutine(PlaySFXAndChangeScene("Map"));
     }
+
     public void GoToUpgradeScene()
     {
-        SceneManager.LoadScene("Upgrade");
+        StartCoroutine(PlaySFXAndChangeScene("Upgrade"));
     }
+
     public void GoToBoatScene()
     {
-        SceneManager.LoadScene("BoatUpgrade");
+        StartCoroutine(PlaySFXAndChangeScene("BoatUpgrade"));
     }
+
     public void GoToDockScene()
     {
-        SceneManager.LoadScene("Dock");
+        StartCoroutine(PlaySFXAndChangeScene("Dock"));
     }
+
     public void GoToVillageScene()
     {
-        SceneManager.LoadScene("Village");
+        StartCoroutine(PlaySFXAndChangeScene("Village"));
+    }
+
+    private IEnumerator PlaySFXAndChangeScene(string sceneName)
+    {
+        src.clip = buttonClip;
+        src.Play();
+        yield return new WaitForSeconds(delayBeforeSceneChange);
+        SceneManager.LoadScene(sceneName);
     }
 }

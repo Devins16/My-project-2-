@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         playerMoney += amount;
         UpdateMoneyUI();
-        Debug.Log($"Money added: {amount}. Total money now: {playerMoney}");
+     
         MoneyUpdate?.Invoke();
     }
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough money to upgrade!");
+           
             return false;
         }
     }
@@ -71,6 +71,6 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"Scene '{scene.name}' loaded. Current money: {playerMoney}");
+       
     }
 }

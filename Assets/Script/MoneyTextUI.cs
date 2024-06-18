@@ -24,12 +24,9 @@ public class MoneyTextUI : MonoBehaviour
         if (moneyText != null)
         {
             moneyText.text = $"Money: ${GameManager.Instance.playerMoney:F2}";
-            Debug.Log($"Money text updated: {moneyText.text}");
+          
         }
-        else
-        {
-            Debug.LogError("Money Text is not assigned in the Inspector");
-        }
+     
     }
 
     

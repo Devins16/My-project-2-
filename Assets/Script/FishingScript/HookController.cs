@@ -52,6 +52,14 @@ public class HookController : MonoBehaviour
 
     [SerializeField] private Vector2 hookAttachmentOffset; // Add this line for the offset
 
+    // References to the panels to hide
+    [SerializeField] private GameObject panel1;  // Replace with your actual panel names
+    [SerializeField] private GameObject panel2;  // Replace with your actual panel names
+
+    // Audio
+    [SerializeField] private AudioSource ascendingSound; // Add this line for the ascending sound
+    [SerializeField] private AudioSource fishCatchSound; // Add this line for the fish catch sound
+
     void Awake()
     {
         instance = this;
@@ -72,8 +80,6 @@ public class HookController : MonoBehaviour
         MaxWeight = maxWeights[GameManager.Instance.rodLevel];
         descendDistance = maxDepths[GameManager.Instance.lineLevel];
     }
-
-    // Other methods remain unchanged...
 
     void Update()
     {
@@ -124,6 +130,11 @@ public class HookController : MonoBehaviour
 
             transform.Translate(Vector3.right * horizontalMovement);
 
+            // Clamp the horizontal position within the boundary
+            Vector3 clampedPosition = transform.position;
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, -50f, 50f);
+            transform.position = clampedPosition;
+
             float descendMovement = descendSpeed * Time.deltaTime;
             transform.Translate(Vector3.down * descendMovement);
 
@@ -142,6 +153,7 @@ public class HookController : MonoBehaviour
             {
                 isAscending = true;
                 canCatchFish = false;  // Disable catching fish when ascending
+                PlayAscendingSound(); // Start the ascending sound effect
             }
         }
         else if (!isPaused)
@@ -162,6 +174,7 @@ public class HookController : MonoBehaviour
                     isPaused = true;
                     returnToMapButton.gameObject.SetActive(true);
                     StartCoroutine(HandleFishPositions());
+                    StopAscendingSound(); // Stop the ascending sound effect
                 }
             }
         }
@@ -237,6 +250,8 @@ public class HookController : MonoBehaviour
                     CurrentWeight += fish.weight;
                     totalValue += fish.value;
                     fishCount++;
+
+                    PlayFishCatchSound(); // Play the fish catch sound effect
                 }
             }
         }
@@ -246,7 +261,7 @@ public class HookController : MonoBehaviour
     {
         if (fishCounterText != null)
         {
-            fishCounterText.text = "Fish Caught: " + fishCount.ToString();
+            fishCounterText.text = "Catch: " + fishCount.ToString();
         }
     }
 
@@ -266,8 +281,6 @@ public class HookController : MonoBehaviour
 
     private IEnumerator HandleFishPositions()
     {
-        Debug.Log("HandleFishPositions started");
-
         yield return new WaitForSeconds(0.5f);
 
         Transform[] fishList = GetComponentsInChildren<Transform>();
@@ -289,10 +302,12 @@ public class HookController : MonoBehaviour
             }
         }
 
-        Debug.Log("Total value: $" + totalValue);
-
         fishCounterText.enabled = false;
         descendDistanceText.enabled = false;
+
+        // Hide the additional panels
+        panel1.SetActive(false);
+        panel2.SetActive(false);
 
         resultsPanel.SetActive(true);
 
@@ -319,9 +334,36 @@ public class HookController : MonoBehaviour
                     fishData.SetValue(fishMovement.value, fishMovement.fishso);
                     InventoryManager.Instance.AddFish(fishMovement.fishso, fishMovement.value); // Corrected line
                     fishImage.sprite = fishSpriteRenderer.sprite;
-                    Debug.Log("Added fish to results: " + fish.name);
                 }
             }
+        }
+    }
+
+    // Methods to control the ascending sound effect
+    private void PlayAscendingSound()
+    {
+        if (ascendingSound != null && !ascendingSound.isPlaying)
+        {
+            ascendingSound.loop = true;
+            ascendingSound.Play();
+        }
+    }
+
+    private void StopAscendingSound()
+    {
+        if (ascendingSound != null && ascendingSound.isPlaying)
+        {
+            ascendingSound.loop = false;
+            ascendingSound.Stop();
+        }
+    }
+
+    // Method to play the fish catch sound effect
+    private void PlayFishCatchSound()
+    {
+        if (fishCatchSound != null)
+        {
+            fishCatchSound.Play();
         }
     }
 }

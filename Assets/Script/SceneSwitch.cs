@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     public TextMeshProUGUI fishPromptText; // Reference to the TextMeshProUGUI element
+    public AudioSource audioSource; // Reference to the AudioSource component
+    public AudioClip fishSoundEffect; // Reference to the sound effect clip
+
     private bool fishingAllowed;
     private string sceneToLoad;
 
@@ -32,9 +35,27 @@ public class SceneSwitch : MonoBehaviour
 
     private void Update()
     {
-        if (fishingAllowed && Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            PlaySoundEffect();
+
+            if (fishingAllowed)
+            {
+                LoadFishingScene();
+            }
         }
+    }
+
+    private void PlaySoundEffect()
+    {
+        if (audioSource != null && fishSoundEffect != null)
+        {
+            audioSource.PlayOneShot(fishSoundEffect);
+        }
+    }
+
+    private void LoadFishingScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
