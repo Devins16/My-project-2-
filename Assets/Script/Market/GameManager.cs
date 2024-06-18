@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public float playerMoney = 0f;
 
-    public int rodLevel = 1; // Store the rod level
-    public int lineLevel = 1; // Store the line level
-    public int baitLevel = 1; // Store the bait level
-    public int boatLevel = 1; // Store the boat level
-    public int tacLevel = 1; // Store the tackle level
+    public int rodLevel = 1; 
+    public int lineLevel = 1; 
+    public int baitLevel = 1; 
+    public int boatLevel = 1; 
+    public int tacLevel = 1;  
 
     void Awake()
     {

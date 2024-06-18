@@ -12,7 +12,7 @@ public class UIMoney : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Pastikan UIMoney tidak dihancurkan
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -25,7 +25,7 @@ public class UIMoney : MonoBehaviour
         if (moneyText != null)
         {
             moneyText.text = $"Money: ${amount:F2}";
-            Debug.Log($"Money text updated: {moneyText.text}");
+          
         }
         else
         {

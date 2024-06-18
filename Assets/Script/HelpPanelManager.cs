@@ -20,31 +20,31 @@ public class HelpPanelManager : MonoBehaviour
 
     void Start()
     {
-        // Menambahkan listener untuk setiap tombol help
+        
         helpRodButton.onClick.AddListener(() => ShowInfo("Rod"));
         helpBaitButton.onClick.AddListener(() => ShowInfo("Bait"));
         helpTackleButton.onClick.AddListener(() => ShowInfo("Tackle"));
         helpLineButton.onClick.AddListener(() => ShowInfo("Line"));
 
-        // Menambahkan listener untuk tombol OK
+       
         rodOkButton.onClick.AddListener(() => CloseInfoPanel("Rod"));
         baitOkButton.onClick.AddListener(() => CloseInfoPanel("Bait"));
         tackleOkButton.onClick.AddListener(() => CloseInfoPanel("Tackle"));
         lineOkButton.onClick.AddListener(() => CloseInfoPanel("Line"));
 
-        // Menyembunyikan semua panel informasi saat mulai
+      
         rodInfoPanel.SetActive(false);
         baitInfoPanel.SetActive(false);
         tackleInfoPanel.SetActive(false);
         lineInfoPanel.SetActive(false);
 
-        // Mendapatkan semua tombol dalam scene
+       
         allButtons = FindObjectsOfType<Button>();
     }
 
     void ShowInfo(string gear)
     {
-        // Menampilkan panel informasi sesuai dengan gear yang dipilih
+       
         switch (gear)
         {
             case "Rod":
@@ -61,13 +61,13 @@ public class HelpPanelManager : MonoBehaviour
                 break;
         }
 
-        // Menonaktifkan semua tombol
+       
         SetAllButtonsInteractable(false);
     }
 
     void CloseInfoPanel(string gear)
     {
-        // Menyembunyikan panel informasi sesuai dengan gear yang dipilih
+      
         switch (gear)
         {
             case "Rod":
@@ -84,7 +84,7 @@ public class HelpPanelManager : MonoBehaviour
                 break;
         }
 
-        // Mengaktifkan kembali semua tombol
+   
         SetAllButtonsInteractable(true);
     }
 

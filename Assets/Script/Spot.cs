@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Spot : MonoBehaviour
 {
-    public float minX = 10f;  // Batas kiri
-    public float maxX = 100f; // Batas kanan
-    public float interval = 20f; // Interval in seconds
+    public float minX = 10f;  
+    public float maxX = 100f; 
+    public float interval = 20f; 
 
     void Start()
     {

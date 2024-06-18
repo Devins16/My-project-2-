@@ -25,9 +25,9 @@ public class FishMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float previousX;
 
-    public Transform mouthTransform; // Define the mouth transform
-    public Rigidbody2D fishRigidbody; // Reference to the fish's Rigidbody2D
-    private Vector3 originalMouthPosition; // Store the original local position of the mouth
+    public Transform mouthTransform; 
+    public Rigidbody2D fishRigidbody; 
+    private Vector3 originalMouthPosition; 
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class FishMovement : MonoBehaviour
         fishRigidbody = GetComponent<Rigidbody2D>();
         previousX = transform.position.x;
 
-        originalMouthPosition = mouthTransform.localPosition; // Save the original local position of the mouth
+        originalMouthPosition = mouthTransform.localPosition;
 
         switch (fishType)
         {
@@ -61,16 +61,16 @@ public class FishMovement : MonoBehaviour
             Vector3 newPosition = transform.position + new Vector3(Mathf.Sin(timeOffset) * moveSpeed * Time.deltaTime, 0f, 0f);
             newPosition.x = Mathf.Clamp(newPosition.x, -xBorder, xBorder);
 
-            // Flip the sprite based on movement direction and update mouth position
+         
             if (newPosition.x > previousX)
             {
-                spriteRenderer.flipX = true; // Facing right
+                spriteRenderer.flipX = true; 
                 mouthTransform.localPosition = new Vector3(-originalMouthPosition.x, originalMouthPosition.y, originalMouthPosition.z); // Mirror the mouth position
             }
             else if (newPosition.x < previousX)
             {
-                spriteRenderer.flipX = false; // Facing left
-                mouthTransform.localPosition = originalMouthPosition; // Reset to original position
+                spriteRenderer.flipX = false; 
+                mouthTransform.localPosition = originalMouthPosition; 
             }
 
             transform.position = newPosition;

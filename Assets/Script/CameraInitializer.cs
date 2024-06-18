@@ -15,20 +15,20 @@ public class CameraInitializer : MonoBehaviour
 
     void Start()
     {
-        // Assign the target to the virtual camera
+     
         virtualCamera.Follow = target;
 
-        // Get the Transposer component to adjust its offset
+    
         transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
 
         if (transposer != null)
         {
-            // Set the initial offset to the initial Y offset
+          
             Vector3 initialOffset = transposer.m_FollowOffset;
             initialOffset.y = initialYOffset;
             transposer.m_FollowOffset = initialOffset;
 
-            // Start the transition
+          
             transitionStartTime = Time.time;
         }
     }

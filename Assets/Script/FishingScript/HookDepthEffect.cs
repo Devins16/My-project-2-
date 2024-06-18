@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HookDepthEffect : MonoBehaviour
 {
     public Transform hook;
-    public float maxDepth = -10f;
+    public float maxDepth = -400f;
     public float minDepth = 0f;
     public Image blackoutImage;
 

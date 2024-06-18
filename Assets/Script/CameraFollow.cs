@@ -8,14 +8,14 @@ public class CameraFollow : MonoBehaviour
     public float yOffset = 1f;
     public Transform target;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
-        // Set the initial position of the camera
+        
         transform.position = new Vector3(transform.position.x, 15f, -10f);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);

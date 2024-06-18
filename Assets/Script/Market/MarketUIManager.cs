@@ -8,8 +8,8 @@ public class MarketUIManager : MonoBehaviour
     public GameObject fishButtonPrefab;
     public Transform fishButtonParent;
     public GameObject detailPanel;
-    public TextMeshProUGUI fishNameText; // Add this field for fish name
-    public Image fishImage; // Add this field for fish image
+    public TextMeshProUGUI fishNameText; 
+    public Image fishImage; 
     public TextMeshProUGUI fishValueText;
     public Button sellButton;
     public GameObject dialogueBox;
@@ -20,8 +20,8 @@ public class MarketUIManager : MonoBehaviour
     void Start()
     {
         PopulateFishButtons();
-        detailPanel.SetActive(false); // Hide detail panel initially
-        dialogueBox.SetActive(false); // Hide dialogue box initially
+        detailPanel.SetActive(false);
+        dialogueBox.SetActive(false); 
     }
 
     void PopulateFishButtons()
@@ -52,8 +52,8 @@ public class MarketUIManager : MonoBehaviour
     void OnFishButtonClicked(FishData fish)
     {
         currentFish = fish;
-        fishNameText.text = fish.Fish.fishName; // Display fish name
-        fishImage.sprite = fish.Fish.fishIcon; // Display fish image
+        fishNameText.text = fish.Fish.fishName; 
+        fishImage.sprite = fish.Fish.fishIcon; 
         fishValueText.text = $"Value: {fish.Value}";
         detailPanel.SetActive(true);
         sellButton.onClick.RemoveAllListeners();
@@ -63,9 +63,9 @@ public class MarketUIManager : MonoBehaviour
     void OnSellButtonClicked()
     {
         InventoryManager.Instance.RemoveFish(currentFish);
-        GameManager.Instance.AddMoney(currentFish.Value); // Add money to the player
+        GameManager.Instance.AddMoney(currentFish.Value); 
         detailPanel.SetActive(false);
-        DestroyFishButton(currentFish); // Destroy the sold fish button
+        DestroyFishButton(currentFish); 
     }
 
     void DestroyFishButton(FishData fish)

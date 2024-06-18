@@ -1013,6 +1013,7 @@ GameObject:
   - component: {fileID: 820030757}
   - component: {fileID: 820030756}
   - component: {fileID: 820030759}
+  - component: {fileID: 820030760}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1085,6 +1086,20 @@ MonoBehaviour:
   src: {fileID: 974915772}
   buttonClip: {fileID: 8300000, guid: c0d8bd3ffc4e0cb4e9d5f5bff0256830, type: 3}
   delayBeforeSceneChange: 1
+--- !u!114 &820030760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820030755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c788a395a25f2114d8fc8c8b8f36faef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 463892964}
+  timeToFade: 1
 --- !u!1 &842633914
 GameObject:
   m_ObjectHideFlags: 0

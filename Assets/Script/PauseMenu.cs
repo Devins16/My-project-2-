@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuPrefab; // Assign this in the Inspector
-    public GameObject muteIndicator; // Assign the mute indicator GameObject in the Inspector
-    public Sprite mutedSprite; // Assign the muted sprite in the Inspector
-    public Sprite unmutedSprite; // Assign the unmuted sprite in the Inspector
+    public GameObject pauseMenuPrefab; 
+    public GameObject muteIndicator; 
+    public Sprite mutedSprite; 
+    public Sprite unmutedSprite; 
 
     private GameObject pauseMenuUI;
     private bool isPaused = false;
@@ -59,10 +59,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(false);
             DontDestroyOnLoad(pauseMenuUI);
         }
-        else
-        {
-            Debug.LogError("No Canvas found in the scene. Please ensure there is a Canvas present.");
-        }
+        
     }
 
     void Update()
@@ -103,7 +100,7 @@ public class PauseMenu : MonoBehaviour
     public void Save()
     {
         Debug.Log("Game Saved!");
-        // Implement save functionality here
+       
     }
 
     public void OpenSettings()

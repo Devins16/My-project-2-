@@ -9,9 +9,9 @@ public class FadeInOut : MonoBehaviour
 
     void Start()
     {
-        // Ensure the canvas group starts fully transparent or opaque
-        canvasGroup.alpha = 1; // Start fully opaque (black)
-        StartCoroutine(FadeCanvas(0)); // Start by fading out
+       
+        canvasGroup.alpha = 1; 
+        StartCoroutine(FadeCanvas(0)); 
     }
 
     public void FadeIn()
@@ -46,8 +46,8 @@ public class FadeInOut : MonoBehaviour
 
     IEnumerator FadeOutAndChangeScene(string sceneName)
     {
-        yield return StartCoroutine(FadeCanvas(1)); // Fade to black
+        yield return StartCoroutine(FadeCanvas(1)); 
         SceneManager.LoadScene(sceneName);
-        yield return StartCoroutine(FadeCanvas(0)); // Fade in from black
+        yield return StartCoroutine(FadeCanvas(0)); 
     }
 }

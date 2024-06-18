@@ -29,7 +29,7 @@ public class BoatUpgradeManager : MonoBehaviour
         {
             GameManager.Instance.boatLevel++;
             UpdateUI();
-            UpdateBoatSpriteInScene(); // Update the boat sprite in the boating scene
+            UpdateBoatSpriteInScene(); 
         }
     }
 
@@ -65,7 +65,7 @@ public class BoatUpgradeManager : MonoBehaviour
 
     void UpdateBoatSpriteInScene()
     {
-        // Find the boat in the boating scene and update its sprite
+        
         CharacterControl boat = FindObjectOfType<CharacterControl>();
         if (boat != null)
         {

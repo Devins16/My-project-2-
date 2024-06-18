@@ -7,7 +7,6 @@ public class MoneyTextUI : MonoBehaviour
 {
     private TextMeshProUGUI moneyText;
 
-    // Start is called before the first frame update
     void Start()
     {
         moneyText = GetComponent<TextMeshProUGUI>();

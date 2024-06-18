@@ -4,21 +4,20 @@ using System.Collections;
 
 public class RopeController : MonoBehaviour
 {
-    public Transform hook;  // Reference to the hook
-    public Transform fishingRod;  // Reference to the fishing rod
-    public GameObject ropeSegmentPrefab;  // Prefab for rope segments
-    public int initialSegmentCount = 10;  // Initial number of rope segments
-    public float segmentLength = 0.5f;  // Length of each rope segment
-    public float lineWidth = 0.05f;  // Width of the rope line
-    public float maxSegmentDistance = 2.0f;  // Distance after which a new segment is added
-    public float delayBeforeAttach = 1.0f;  // Delay before attaching the rope segments
+    public Transform hook; 
+    public Transform fishingRod;  
+    public GameObject ropeSegmentPrefab;  
+    public int initialSegmentCount = 10;  
+    public float segmentLength = 0.5f;  
+    public float lineWidth = 0.05f;  
+    public float maxSegmentDistance = 2.0f;  
+    public float delayBeforeAttach = 1.0f;  
 
     private List<GameObject> ropeSegments = new List<GameObject>();
     private LineRenderer lineRenderer;
 
     void Start()
     {
-        // Start the coroutine to create the rope after a delay
         StartCoroutine(DelayedCreateRope());
         InitializeLineRenderer();
     }
@@ -51,7 +50,6 @@ public class RopeController : MonoBehaviour
             previousRB = segment.GetComponent<Rigidbody2D>();
         }
 
-        // Connect the last segment to the hook
         HingeJoint2D hookJoint = hook.gameObject.AddComponent<HingeJoint2D>();
         hookJoint.connectedBody = previousRB;
         hookJoint.autoConfigureConnectedAnchor = false;
@@ -64,7 +62,7 @@ public class RopeController : MonoBehaviour
     void InitializeLineRenderer()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.positionCount = initialSegmentCount + 2;  // Including fishing rod and hook
+        lineRenderer.positionCount = initialSegmentCount + 2;  
         lineRenderer.startWidth = lineWidth;
         lineRenderer.endWidth = lineWidth;
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BubbleSpawner : MonoBehaviour
 {
-    public GameObject bubblePrefab; // Prefab Gelembung
-    public float spawnInterval = 1f; // Interval waktu antara spawn gelembung
-    public float bubbleLifeTime = 5f; // Waktu hidup gelembung sebelum menghilang
+    public GameObject bubblePrefab; 
+    public float spawnInterval = 1f; 
+    public float bubbleLifeTime = 5f; 
 
     private Camera mainCamera;
 
@@ -27,10 +27,10 @@ public class BubbleSpawner : MonoBehaviour
 
     void SpawnBubble()
     {
-        // Tentukan posisi random di sekitar kamera
+        
         Vector3 spawnPosition = GetRandomPositionAroundCamera();
         GameObject bubble = Instantiate(bubblePrefab, spawnPosition, Quaternion.identity);
-        Destroy(bubble, bubbleLifeTime); // Hancurkan gelembung setelah waktu hidupnya habis
+        Destroy(bubble, bubbleLifeTime); 
     }
 
     Vector3 GetRandomPositionAroundCamera()

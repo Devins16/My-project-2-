@@ -6,14 +6,14 @@ using TMPro;
 
 public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject infoPanel; // Reference to the panel
-    public TextMeshProUGUI locationText; // Reference to the text component in the panel
-    public string locationName; // The name to be displayed
-    private Animator panelAnimator; // Reference to the panel's Animator component
+    public GameObject infoPanel; 
+    public TextMeshProUGUI locationText; 
+    public string locationName; 
+    private Animator panelAnimator; 
 
     void Start()
     {
-        // Ensure the panel is hidden at the start
+       
         if (infoPanel != null)
         {
             panelAnimator = infoPanel.GetComponent<Animator>();
@@ -23,7 +23,7 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Show the panel and update the text when the pointer enters the button
+     
         if (infoPanel != null && locationText != null)
         {
             infoPanel.SetActive(true);
@@ -34,7 +34,6 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Hide the panel when the pointer exits the button
         if (infoPanel != null)
         {
             infoPanel.SetActive(false);

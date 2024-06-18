@@ -3,13 +3,13 @@ using UnityEngine;
 public class Boat : MonoBehaviour
 {
     public SpriteRenderer boatSpriteRenderer;
-    public Sprite[] boatSprites; // Array untuk menyimpan sprites kapal sesuai level
+    public Sprite[] boatSprites; 
 
     private int currentBoatLevel;
 
     void Start()
     {
-        // Mengatur level kapal sesuai dengan GameManager
+        
         currentBoatLevel = GameManager.Instance.boatLevel;
         UpdateBoatSprite();
     }

@@ -26,7 +26,7 @@ public class InventoryManager : MonoBehaviour
         {
             Fish = fishSo,
             Value = value,
-            FishSprite = fishSo.fishSprite // Assign the sprite from FishSo
+            FishSprite = fishSo.fishSprite 
         };
         fishInventory.Add(fishData);
     }
@@ -54,8 +54,8 @@ public struct FishData
     {
         Value = value;
         Fish = fish;
-        FishSprite = fish.fishSprite; // Assuming fishSo has a sprite field
-        FishName = fish.fishName; // Assuming fishSo has a name field
+        FishSprite = fish.fishSprite; 
+        FishName = fish.fishName; 
     }
 }
 

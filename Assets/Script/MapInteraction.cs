@@ -6,7 +6,7 @@ public class MapInteraction : MonoBehaviour
 {
     public AudioSource src;
     public AudioClip buttonClip;
-    public float delayBeforeSceneChange = 1f; // Adjust this delay based on your SFX length
+    public float delayBeforeSceneChange = 1f; 
 
     public void GoToBoatingScene()
     {

@@ -7,15 +7,15 @@ public class GearUpgradeManager : MonoBehaviour
     public Button upgradeRodButton;
     public Button upgradeLineButton;
     public Button upgradeBaitButton;
-    public Button upgradeTacButton;  // New button for tackle upgrade
+    public Button upgradeTacButton;  
     public TextMeshProUGUI rodLevelText;
     public TextMeshProUGUI lineLevelText;
     public TextMeshProUGUI baitLevelText;
-    public TextMeshProUGUI tacLevelText;  // Text for tackle level
+    public TextMeshProUGUI tacLevelText;  
     public TextMeshProUGUI rodUpgradeCostText;
     public TextMeshProUGUI lineUpgradeCostText;
     public TextMeshProUGUI baitUpgradeCostText;
-    public TextMeshProUGUI tacUpgradeCostText;  // Text for tackle upgrade cost
+    public TextMeshProUGUI tacUpgradeCostText;  
 
     public GameObject upgradeSuccessPanel;
     public GameObject notEnoughMoneyPanel;
@@ -25,12 +25,12 @@ public class GearUpgradeManager : MonoBehaviour
     public Image rodImage;
     public Image lineImage;
     public Image baitImage;
-    public Image tacImage;  // Image for tackle
+    public Image tacImage; 
 
     public Sprite[] rodSprites;
     public Sprite[] lineSprites;
     public Sprite[] baitSprites;
-    public Sprite[] tacSprites;  // Sprites for tackle
+    public Sprite[] tacSprites; 
 
     private int[] upgradeCosts = { 0, 20, 50, 100, 250 };
     private int[] maxWeights = { 0, 1000, 2000, 3000, 5000 };
@@ -41,7 +41,7 @@ public class GearUpgradeManager : MonoBehaviour
         upgradeRodButton.onClick.AddListener(UpgradeRod);
         upgradeLineButton.onClick.AddListener(UpgradeLine);
         upgradeBaitButton.onClick.AddListener(UpgradeBait);
-        upgradeTacButton.onClick.AddListener(UpgradeTac);  // Add listener for tackle upgrade
+        upgradeTacButton.onClick.AddListener(UpgradeTac);  
 
         successPanelOkButton.onClick.AddListener(HideSuccessPanel);
         notEnoughMoneyOkButton.onClick.AddListener(HideNotEnoughMoneyPanel);
@@ -112,12 +112,12 @@ public class GearUpgradeManager : MonoBehaviour
         rodLevelText.text = $"Rod Level: {GameManager.Instance.rodLevel}";
         lineLevelText.text = $"Line Level: {GameManager.Instance.lineLevel}";
         baitLevelText.text = $"Bait Level: {GameManager.Instance.baitLevel}";
-        tacLevelText.text = $"Tackle Level: {GameManager.Instance.tacLevel}";  // Update tackle level text
+        tacLevelText.text = $"Tackle Level: {GameManager.Instance.tacLevel}";  
 
         rodImage.sprite = rodSprites[GameManager.Instance.rodLevel];
         lineImage.sprite = lineSprites[GameManager.Instance.lineLevel];
         baitImage.sprite = baitSprites[GameManager.Instance.baitLevel];
-        tacImage.sprite = tacSprites[GameManager.Instance.tacLevel];  // Update tackle image
+        tacImage.sprite = tacSprites[GameManager.Instance.tacLevel];  
 
         if (GameManager.Instance.rodLevel < 4)
         {

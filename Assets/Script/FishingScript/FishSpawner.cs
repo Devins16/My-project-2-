@@ -35,7 +35,6 @@ public class FishSpawner : MonoBehaviour
         switch (GameManager.Instance.baitLevel)
         {
             case 1:
-                // Normal bait, default rates
                 commonSpawnRate = 0.9f;
                 rareSpawnRate = 0.1f;
                 veryRareSpawnRate = 0f;
@@ -57,7 +56,6 @@ public class FishSpawner : MonoBehaviour
                 break;
         }
 
-        // Ensure the total spawn rate doesn't exceed 1
         float totalSpawnRate = commonSpawnRate + rareSpawnRate + veryRareSpawnRate;
         if (totalSpawnRate > 1f)
         {
@@ -91,7 +89,7 @@ public class FishSpawner : MonoBehaviour
             }
             else
             {
-                continue; // If no category matches, skip spawning this fish
+                continue;
             }
 
             GameObject fishPrefabToSpawn = fishPrefabsToSpawnFrom[Random.Range(0, fishPrefabsToSpawnFrom.Length)];

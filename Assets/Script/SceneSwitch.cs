@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    public TextMeshProUGUI fishPromptText; // Reference to the TextMeshProUGUI element
-    public AudioSource audioSource; // Reference to the AudioSource component
-    public AudioClip fishSoundEffect; // Reference to the sound effect clip
+    public TextMeshProUGUI fishPromptText; 
+    public AudioSource audioSource; 
+    public AudioClip fishSoundEffect; 
 
     private bool fishingAllowed;
     private string sceneToLoad;
@@ -17,7 +17,7 @@ public class SceneSwitch : MonoBehaviour
         {
             sceneToLoad = "Fishing";
             fishingAllowed = true;
-            // Activate TextMeshProUGUI and set its message
+           
             fishPromptText.gameObject.SetActive(true);
             fishPromptText.text = "Press Enter to fish";
         }
@@ -28,7 +28,7 @@ public class SceneSwitch : MonoBehaviour
         if (collision.GetComponent<Spot>())
         {
             fishingAllowed = false;
-            // Deactivate TextMeshProUGUI
+           
             fishPromptText.gameObject.SetActive(false);
         }
     }
