@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 588553fdb29d84d4c93c12f98c220962
+  - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 3b41afcc78940e543acee23c6ed752eb
   - enabled: 1
@@ -13,7 +16,7 @@ EditorBuildSettings:
     guid: a4db5347e8d85f244b06e251d243ba3c
   - enabled: 1
     path: Assets/Scenes/Boating.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 147885e7cb37fb942bde8381455b1bfd
   - enabled: 1
     path: Assets/Scenes/Fishing.unity
     guid: c626a34339f01c64cb26ce506d68eba9
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoatUpgrade.unity
     guid: 35cb48ac88461334f9b13104eead27a2
-  - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: 588553fdb29d84d4c93c12f98c220962
   - enabled: 1
     path: Assets/Scenes/Dock.unity
     guid: 9c1d461adc429db4e80078b70102df09

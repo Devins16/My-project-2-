@@ -1424,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &353592049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12288,7 +12288,7 @@ SpriteRenderer:
   m_Size: {x: 36, y: 20.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1405140647
@@ -15853,7 +15853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_AnchorMin.x
@@ -15861,7 +15861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_SizeDelta.x
@@ -15901,11 +15901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 265.3515
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -316.01694
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2575888413787219128, guid: ebb2afe7239674f4c960e34f1bb38790, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

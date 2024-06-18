@@ -22,7 +22,10 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
     }
 
     public void PlayMapMusic()
@@ -40,6 +43,14 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = boatingMusic;
             audioSource.Play();
+        }
+    }
+
+    public void StopMusic()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 }

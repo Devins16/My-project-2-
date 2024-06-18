@@ -1,8 +1,12 @@
 using UnityEngine;
-using UnityEditor;
 
 namespace Bundos.WaterSystem
 {
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
+
+#if UNITY_EDITOR
     [CustomEditor(typeof(Water))]
     public class WaterEditor : Editor
     {
@@ -19,4 +23,5 @@ namespace Bundos.WaterSystem
             water.UpdateMesh();
         }
     }
+#endif
 }

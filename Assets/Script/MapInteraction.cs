@@ -43,11 +43,27 @@ public class MapInteraction : MonoBehaviour
         StartCoroutine(PlaySFXAndChangeScene("Village"));
     }
 
+    public void QuitApplication()
+    {
+        StartCoroutine(PlaySFXAndQuit());
+    }
+
     private IEnumerator PlaySFXAndChangeScene(string sceneName)
     {
         src.clip = buttonClip;
         src.Play();
         yield return new WaitForSeconds(delayBeforeSceneChange);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator PlaySFXAndQuit()
+    {
+        src.clip = buttonClip;
+        src.Play();
+        yield return new WaitForSeconds(delayBeforeSceneChange);
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }
