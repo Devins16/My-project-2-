@@ -2004,6 +2004,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f06f1148178b224181cbda8b8292aa5, type: 2}
   - {fileID: 11400000, guid: f88a0c7b983a9f94cb3ab4cc33fabde3, type: 2}
   - {fileID: 11400000, guid: 5cb519367e9db3c48920efd007ebe585, type: 2}
+  - {fileID: 11400000, guid: 745d374272b32b14d81dd796ac649ddb, type: 2}
+  legendaryFishName: Sacred
+  endingSceneName: Ending
 --- !u!4 &577721761
 Transform:
   m_ObjectHideFlags: 0

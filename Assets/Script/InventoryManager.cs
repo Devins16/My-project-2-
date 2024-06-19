@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     public List<FishData> fishInventory = new List<FishData>();
     public List<FishSo> fishDatabase = new List<FishSo>();
+    public string legendaryFishName = "Legendary Fish"; // Name of the legendary fish
+    public string endingSceneName = "EndingScene"; // Name of the ending scene
 
     void Awake()
     {
@@ -26,9 +29,16 @@ public class InventoryManager : MonoBehaviour
         {
             Fish = fishSo,
             Value = value,
-            FishSprite = fishSo.fishSprite 
+            FishSprite = fishSo.fishSprite,
+            FishName = fishSo.fishName // Ensure the fish name is set
         };
         fishInventory.Add(fishData);
+
+        // Check if the added fish is a legendary fish
+        if (fishSo.fishName == legendaryFishName)
+        {
+            ChangeSceneToEnding();
+        }
     }
 
     public List<FishData> GetFishInventory()
@@ -39,6 +49,11 @@ public class InventoryManager : MonoBehaviour
     public void RemoveFish(FishData fish)
     {
         fishInventory.Remove(fish);
+    }
+
+    private void ChangeSceneToEnding()
+    {
+        SceneManager.LoadScene(endingSceneName);
     }
 }
 
@@ -54,8 +69,7 @@ public struct FishData
     {
         Value = value;
         Fish = fish;
-        FishSprite = fish.fishSprite; 
-        FishName = fish.fishName; 
+        FishSprite = fish.fishSprite;
+        FishName = fish.fishName;
     }
 }
-

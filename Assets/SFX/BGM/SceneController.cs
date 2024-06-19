@@ -19,8 +19,8 @@ public class SceneController : MonoBehaviour
 
         if (scene.name == "Main Menu")
         {
-            
-            AudioManager.Instance.StopMusic();
+
+            AudioManager.Instance.PlayMainMenuMusic();
         }
         else if (scene.name == "Map" || scene.name == "Dock" || scene.name == "Village" ||
                  scene.name == "gearupgrade" || scene.name == "boatupgrade" || scene.name == "market")

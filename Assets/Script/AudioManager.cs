@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip mapMusic;
     public AudioClip boatingMusic;
+    public AudioClip mainmenuMusic;
+
 
     void Awake()
     {
@@ -42,6 +44,15 @@ public class AudioManager : MonoBehaviour
         if (audioSource.clip != boatingMusic)
         {
             audioSource.clip = boatingMusic;
+            audioSource.Play();
+        }
+    }
+
+    public void PlayMainMenuMusic()
+    {
+        if (audioSource.clip != mainmenuMusic)
+        {
+            audioSource.clip = mainmenuMusic;
             audioSource.Play();
         }
     }
