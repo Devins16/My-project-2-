@@ -13,9 +13,9 @@ public class MapInteraction : MonoBehaviour
         StartCoroutine(PlaySFXAndChangeScene("Boating"));
     }
 
-    public void GoToMarketScene()
+    public void GoToSellFishScene()
     {
-        StartCoroutine(PlaySFXAndChangeScene("Market"));
+        StartCoroutine(PlaySFXAndChangeScene("SellFish"));
     }
 
     public void GoToMapScene()
@@ -23,12 +23,12 @@ public class MapInteraction : MonoBehaviour
         StartCoroutine(PlaySFXAndChangeScene("Map"));
     }
 
-    public void GoToUpgradeScene()
+    public void GoToUpgradeGearScene()
     {
-        StartCoroutine(PlaySFXAndChangeScene("Upgrade"));
+        StartCoroutine(PlaySFXAndChangeScene("UpgradeGear"));
     }
 
-    public void GoToBoatScene()
+    public void GoToBoatUpgradeScene()
     {
         StartCoroutine(PlaySFXAndChangeScene("BoatUpgrade"));
     }
@@ -38,9 +38,29 @@ public class MapInteraction : MonoBehaviour
         StartCoroutine(PlaySFXAndChangeScene("Dock"));
     }
 
-    public void GoToVillageScene()
+    public void GoToMamanHutScene()
     {
-        StartCoroutine(PlaySFXAndChangeScene("Village"));
+        StartCoroutine(PlaySFXAndChangeScene("MamanHut"));
+    }
+
+    public void GoToMarketScene()
+    {
+        StartCoroutine(PlaySFXAndChangeScene("Market"));
+    }
+
+    public void GoToJokoShopScene()
+    {
+        StartCoroutine(PlaySFXAndChangeScene("JokoShop"));
+    }
+
+    public void GoToAuntShopScene()
+    {
+        StartCoroutine(PlaySFXAndChangeScene("AuntShop"));
+    }
+
+    public void GoToPrologueScene()
+    {
+        SceneManager.LoadScene("Prologue");
     }
 
     public void QuitApplication()

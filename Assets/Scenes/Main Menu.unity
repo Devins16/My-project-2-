@@ -293,7 +293,7 @@ MonoBehaviour:
   audioSource: {fileID: 206210353}
   mapMusic: {fileID: 8300000, guid: 97cd586ac83d99240b5dbeb0b207a221, type: 3}
   boatingMusic: {fileID: 8300000, guid: 411487dfa4171cc4d9f8a566ad39948a, type: 3}
-  mainmenuMusic: {fileID: 8300000, guid: 05f3865bf83fff14dbf27043ba281c87, type: 3}
+  mainmenuMusic: {fileID: 8300000, guid: 2de417f012eee8a42a254f81315836e8, type: 3}
 --- !u!82 &206210353
 AudioSource:
   m_ObjectHideFlags: 0
@@ -582,6 +582,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &331846059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331846061}
+  - component: {fileID: 331846060}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &331846060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331846059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d4cff00a30ba7045ade4c5dbeb10683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  moneyText: {fileID: 0}
+  playerMoney: 0
+  rodLevel: 1
+  lineLevel: 1
+  baitLevel: 1
+  boatLevel: 1
+  tacLevel: 1
+--- !u!4 &331846061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331846059}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 778.73114, y: 395.2946, z: 8.50792}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463892962
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,8 +758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -583, y: 189}
-  m_SizeDelta: {x: 295.2765, y: 50}
+  m_AnchoredPosition: {x: -583, y: 147.49292}
+  m_SizeDelta: {x: 295.2765, y: 15.4107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &752606460
 MonoBehaviour:
@@ -764,7 +818,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1067,8 +1121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -583, y: 203}
-  m_SizeDelta: {x: 295.2765, y: 50}
+  m_AnchoredPosition: {x: -583, y: 230.67139}
+  m_SizeDelta: {x: 295.2765, y: 73.0595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365285239
 MonoBehaviour:
@@ -1117,15 +1171,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.14
-  m_fontSizeBase: 51.14
+  m_fontSize: 64.3
+  m_fontSizeBase: 64.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1252,7 +1306,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 820030759}
         m_TargetAssemblyTypeName: MapInteraction, Assembly-CSharp
-        m_MethodName: GoToMapScene
+        m_MethodName: GoToPrologueScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1359,8 +1413,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a5ebaef43e6f78e4c9ce66509cef83c6, type: 2}
+  m_sharedMaterial: {fileID: 3376137017464918088, guid: a5ebaef43e6f78e4c9ce66509cef83c6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1384,8 +1438,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 19.96
+  m_fontSizeBase: 19.96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1493,8 +1547,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a5ebaef43e6f78e4c9ce66509cef83c6, type: 2}
+  m_sharedMaterial: {fileID: 3376137017464918088, guid: a5ebaef43e6f78e4c9ce66509cef83c6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1518,8 +1572,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20.8
+  m_fontSizeBase: 20.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1769,3 +1823,4 @@ SceneRoots:
   - {fileID: 206210354}
   - {fileID: 2071047485}
   - {fileID: 294122855}
+  - {fileID: 331846061}

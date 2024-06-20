@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -797, y: 98}
-  m_SizeDelta: {x: 253.4109, y: 71.676}
+  m_AnchoredPosition: {x: -620.52625, y: 98}
+  m_SizeDelta: {x: 468.833, y: 71.676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31044664
 MonoBehaviour:
@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013737470}
         m_TargetAssemblyTypeName: MapInteraction, Assembly-CSharp
-        m_MethodName: GoToBoatScene
+        m_MethodName: GoToMamanHutScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -427,8 +427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -797, y: -23}
-  m_SizeDelta: {x: 253.42, y: 71.676}
+  m_AnchoredPosition: {x: -620.52625, y: -23}
+  m_SizeDelta: {x: 468.8499, y: 71.676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506815851
 MonoBehaviour:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade Boat
+  m_text: Vist Mr. Maman's Hut
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2b84310fa7041847a613d1a00dbc079, type: 2}
   m_sharedMaterial: {fileID: 1096530380620331925, guid: b2b84310fa7041847a613d1a00dbc079, type: 2}
@@ -1667,8 +1667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -588, y: 41}
-  m_SizeDelta: {x: 653.7072, y: 134.2799}
+  m_AnchoredPosition: {x: -11.3337, y: 6.2611}
+  m_SizeDelta: {x: 1807.0396, y: 203.7578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1611998590
 MonoBehaviour:
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mau Pergi Kemana?
+  m_text: Where do I want to go next?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 42fc182b3f9b3c943b1d9119a46a2f85, type: 2}
   m_sharedMaterial: {fileID: 8907260744788132579, guid: 42fc182b3f9b3c943b1d9119a46a2f85, type: 2}
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1803,8 +1803,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -797, y: -148}
-  m_SizeDelta: {x: 253.42, y: 71.676}
+  m_AnchoredPosition: {x: -620.52625, y: -148}
+  m_SizeDelta: {x: 468.8499, y: 71.676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686606913
 MonoBehaviour:

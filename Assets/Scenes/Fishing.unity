@@ -908,7 +908,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -1589,8 +1589,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294769919
-  m_fontColor: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1607,8 +1607,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 44.6
+  m_fontSizeBase: 44.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5cb519367e9db3c48920efd007ebe585, type: 2}
   - {fileID: 11400000, guid: 745d374272b32b14d81dd796ac649ddb, type: 2}
   legendaryFishName: Sacred
-  endingSceneName: Ending
+  endingSceneName: Epilogue
 --- !u!4 &577721761
 Transform:
   m_ObjectHideFlags: 0
@@ -7797,8 +7797,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7815,8 +7815,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104
-  m_fontSizeBase: 104
+  m_fontSize: 98.6
+  m_fontSizeBase: 98.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8159,7 +8159,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -8462,7 +8462,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -8949,7 +8949,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -9059,7 +9059,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -9491,7 +9491,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -9711,7 +9711,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -9971,7 +9971,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -10041,8 +10041,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10215,7 +10215,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -11038,7 +11038,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -12487,7 +12487,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -12956,7 +12956,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -13373,7 +13373,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -14056,7 +14056,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -14919,7 +14919,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}
@@ -15227,7 +15227,7 @@ MonoBehaviour:
   - {fileID: 544184750055601329, guid: cd9ab897045e60e4896e10b1f1fb7221, type: 3}
   - {fileID: 544184750055601329, guid: 70165a04baaa31a4491c987ad1a1523c, type: 3}
   minFishOnScreen: 50
-  maxFishOnScreen: 100
+  maxFishOnScreen: 80
   xBorder: 50
   yBorder: 8
   visibilityCollider: {fileID: 74879951}

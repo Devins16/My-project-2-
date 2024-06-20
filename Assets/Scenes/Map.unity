@@ -123,60 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &53184034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53184036}
-  - component: {fileID: 53184035}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &53184035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53184034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4cff00a30ba7045ade4c5dbeb10683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoneyUpdate:
-    m_PersistentCalls:
-      m_Calls: []
-  moneyText: {fileID: 0}
-  playerMoney: 0
-  rodLevel: 1
-  lineLevel: 1
-  baitLevel: 1
-  boatLevel: 1
-  tacLevel: 1
---- !u!4 &53184036
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53184034}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 778.73114, y: 395.2946, z: 8.50792}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61304641
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f391de6620770414dae727015f828a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  src: {fileID: 0}
-  buttonClip: {fileID: 0}
+  src: {fileID: 331658082}
+  buttonClip: {fileID: 8300000, guid: c0d8bd3ffc4e0cb4e9d5f5bff0256830, type: 3}
   delayBeforeSceneChange: 0
 --- !u!4 &357129189
 Transform:
@@ -575,8 +521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 764.62195, y: 473}
-  m_SizeDelta: {x: -1541.7574, y: -982.4564}
+  m_AnchoredPosition: {x: 738.5563, y: 465.6576}
+  m_SizeDelta: {x: -1489.6261, y: -967.7715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409943865
 MonoBehaviour:
@@ -600,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: ffe4917b47574dd439dd61068c8419ca, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -807,7 +753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Village
+  m_text: Market
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2b84310fa7041847a613d1a00dbc079, type: 2}
   m_sharedMaterial: {fileID: 1096530380620331925, guid: b2b84310fa7041847a613d1a00dbc079, type: 2}
@@ -834,15 +780,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 31.4
+  m_fontSizeBase: 31.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -870,7 +816,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -7.10149, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.3947372, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -987,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.2938, y: -4.2}
-  m_SizeDelta: {x: 277.4874, y: 51.4761}
+  m_AnchoredPosition: {x: -41.6747, y: -0.1617}
+  m_SizeDelta: {x: 300.2491, y: 43.3994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801511272
 MonoBehaviour:
@@ -1045,7 +991,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1073,7 +1019,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.734375, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1192,7 +1138,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Village
+          m_StringArgument: Market
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1373750582}
@@ -2025,7 +1971,6 @@ SceneRoots:
   - {fileID: 1373750579}
   - {fileID: 671799313}
   - {fileID: 357129189}
-  - {fileID: 53184036}
   - {fileID: 911993163}
   - {fileID: 331658083}
   - {fileID: 1257892646}

@@ -1,0 +1,136 @@
+CreateCharacter(Dayana), CreateCharacter(Arka), CreateCharacter("Aunt as Gossip Aunt")
+CreateCharacter(Joko), CreateCharacter(Maman), CreateCharacter(Mother)
+CreateCharacter(Father), CreateCharacter("Chief as Village Chief")
+
+Dayana "Dayana speak"
+Arkan "Arkan Speak"
+Aunt "Aunt Speak"
+Joko "Joko Speak"
+Maman "Maman Speak""
+Mother "Mother Speak"
+Father "Father Speak"
+Chief "Village chief Speak"
+
+Load(DialogueSegmentation)
+
+
+
+
+[wait]showUI()
+playAmbience(RainyMood)
+PlaySong(Upbeat)
+playVoice(exclamation)
+
+SetLayerMedia(background "scene bayangan arkan dan sang kakek")
+enter Dayana "Yes! It worked!"
+
+HideDB(-spd 0.5)
+
+wait(1)
+
+
+
+stopsong()
+StopAmbience()
+
+ShowDB(-i true)
+
+
+playsfx(thunder_Strong_01 -p 0.85 -v 0.3 -loop true)
+Narrator "Did you know that astraphobia is the fear of thunder and lightning?"
+
+stopsfx(thunder_Strong_01)
+
+playVoice(exclamation)
+enter Dayana "Yes! It worked!"
+
+[wait]hideUI()
+
+
+wait(10)
+
+SetLayerMedia(background Nebula), SetLayerMedia(background 1 SpaceshipInterior)
+
+CreateCharacter(Dayana -e true -i true)
+
+Dayana "Welcome to the space!"
+
+ClearLayerMedia(background -blend hypno)
+
+Dayana "Did we clear the background?"
+
+SetLayerMedia(cinematic -m "~/Graphics/Gallery/flower")
+
+Narrator "Have a look at the cinematic layer, huh?"
+
+ClearLayerMedia(cinematic -i true)
+
+Dayana "the cinematic layer should be cleared!"
+
+
+
+wait(3)
+
+
+
+CreateCharacter(Dayana 1 -e true -i true), CreateCharacter(Arkan -e true -i true), CreateCharacter("Girl as Dayana" -e true -i true)
+
+Arkan.SetPosition(1), Dayana.SetPosition(0)
+
+wait(1)
+
+Arkan.SetSprite(02 -l 0 -spd 0.75), Arkan.SetSprite("01 02 sad" -l 1 -spd 0.75)
+
+CreateCharacter(Emily)
+
+Emily.SetSprite(Happy)
+
+Emily "Hi!"
+
+wait(5)
+
+[wait]Unhighlight(Dayana Arkan), wait(1), [wait]Highlight(Dayana Arkan), wait(1)
+
+Girl.Show(-i true), wait(0.5)
+
+[wait]Highlight(Dayana -o true), wait(1), [wait]Unhighlight(Dayana -o true), wait(1)
+
+wait(1)
+
+[wait]Dayana.UnHighlight(), [wait]Arkan.UnHighlight()
+[wait]Dayana.Highlight(), [wait]Arkan.Highlight()
+
+Dayana.UnHighlight(-i true), Arkan.UnHighlight(-i true)
+wait(1)
+Dayana.Highlight(-i true), Arkan.Highlight(-i true)
+
+wait(1)
+
+
+Dayana.SetPriority(5), wait(1), Arkan.SetPriority(6)
+
+wait(1), Sort(Dayana Arkan Girl), Dayana.SetColor(red), wait(1)
+
+
+[wait]MoveCharacter(Dayana 1 -2.5 -spd 1)
+
+[wait]Dayana.Hide(), [wait]Dayana.Show()
+
+[wait]Dayana.Move(0 1 -spd 1)
+
+Hide(Dayana Girl Arkan -spd 0.5)
+Dayana "Now we're invisible."
+
+Show(Dayana Girl Arkan -spd 0.5)
+
+Dayana "Thank you for joining me!{c}I'm looking forward to writing some commands with you!"
+
+MoveCharacter(Girl 0 -spd 0.5), MoveCharacter(Arkan 0.1 -spd 0.5), Hide(Dayana)
+
+Girl "Where did she go?"
+
+Arkan "I don't know!"
+
+Girl "Did we miss her?"
+
+Arkan "I said, I don't know."

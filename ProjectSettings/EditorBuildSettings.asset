@@ -9,10 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 588553fdb29d84d4c93c12f98c220962
   - enabled: 1
+    path: Assets/Scenes/VisualNovel/Prologue.unity
+    guid: 583d9d84e772a4144858aa5dd37f5f1d
+  - enabled: 0
+    path: Assets/Scenes/VisualNovel/VisualNovel.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Dock.unity
+    guid: 9c1d461adc429db4e80078b70102df09
+  - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 3b41afcc78940e543acee23c6ed752eb
   - enabled: 1
-    path: Assets/Scenes/Market.unity
+    path: Assets/Scenes/SellFish.unity
     guid: a4db5347e8d85f244b06e251d243ba3c
   - enabled: 1
     path: Assets/Scenes/Boating.unity
@@ -21,18 +30,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Fishing.unity
     guid: c626a34339f01c64cb26ce506d68eba9
   - enabled: 1
-    path: Assets/Scenes/Upgrade.unity
+    path: Assets/Scenes/UpgradeGear.unity
     guid: ed17a57f4ad6b014db7c18957c15d78d
   - enabled: 1
     path: Assets/Scenes/BoatUpgrade.unity
     guid: 35cb48ac88461334f9b13104eead27a2
   - enabled: 1
-    path: Assets/Scenes/Dock.unity
-    guid: 9c1d461adc429db4e80078b70102df09
-  - enabled: 1
-    path: Assets/Scenes/Village.unity
+    path: Assets/Scenes/Market.unity
     guid: a000776cf4af3d046a8ef51008d6903f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ending.unity
     guid: 4b3f284f509595e40895e9096d266acc
+  - enabled: 1
+    path: Assets/Scenes/MamanHut.unity
+    guid: 80c49af1e9baba543ad8b9ee03aeedcd
+  - enabled: 1
+    path: Assets/Scenes/JokoShop.unity
+    guid: 34ab2fd0a2ebddd49a5132686c50ef2f
+  - enabled: 1
+    path: Assets/Scenes/AuntShop.unity
+    guid: 8488eb23960c36c4aab53591995278c6
+  - enabled: 1
+    path: Assets/Scenes/VisualNovel/Epilogue.unity
+    guid: a5f4e197f4ace11498188f123f480482
   m_configObjects: {}

@@ -1,0 +1,51 @@
+This is narrator speaking.
+This dialogue was written without using a quotation mark and without declaring the speaker name.
+
+narrator "While this is placed in the quotation mark, with narrator as it's speaker"
+
+"Did you notice that after I put narrator as speaker, the Name changed? That's right. Because the previous dialogue hasn't declaring the speaker, the system won't changed the Name Text which is why it just leave it at 'Name'"
+
+But after declaring the speaker, the system would automaticaly assumed the previous speaker as the same person, even though I wrote this using the same style of the first dialogue line.
+
+"this dialogue is also written in quotation mark, but without putting the speaker. And it work as the same way as the previous dialogue."
+
+This is created so that the story writer can easily put the dialogue lines to the program.
+After all, it would be tiring to write long dialogue from the same speaker and keep writing the speaker name multiple times.
+
+Well, why don't our heroine say something here?
+
+Dayana "Hello everyone. I'm Dayana. The actor who play as the heroine of this story \"Fishing Legends: The Master Angler Legacy\""
+
+"Next i will replace the narrator to explain other feature of this dialogue system."
+
+"The dialogue of this game have the similar way with the other VN system"
+
+"(like thought. If the character is thinking about something, the dialogue would be placed in parentheses like this.)"
+
+"next is appending text. this is the function that allow the dialogue to be written by appending text."
+
+"for example is here.{a} Did you realize there's a pause there? That's is appending. The text won't continue showing the rest of the dialogue without the player input. In this case, by mouse click."
+
+"next is clear text. For long dialogue, sometimes we need to clear the text to continue the conversation so that the text won't be written beyond the dialogue box. Just like this dialogue"
+
+"After all, you don't want to make something like this right?"
+
+narrator "Furina my love, furina my god, furina my beloved, you are as dazzling as a night sky, a moonlit abyss, and the epitome of grace and power of the whole Tevyat. Every swirl of your enchanting cloak is like a dance of cosmic energies, captivating my heart and soul. your eyes like constellations and a smile that could outshine the sun itself! Your elegance could rival the most breathtaking of landscapes in all of Teyvat. Your mere presence transcends dimensions, leaving me in awe like a star-struck adventurer."
+
+"Ahem. Please ignore the copypasta before. You can continue Dayana"
+
+Dayana "...{wa 1}Well, next is wait append and clear. {wc 1}They have the same function as the regular append and clear but they don't need user input to be activated {wc 1}as they activated automaticaly after waiting for 1 second. Just like this dialogue."
+
+"Next is colored text. our main character and major npc have a different color of text, which will help the player easily differentiate the speaker identity. Just like now."
+
+"The last thing is command function. it's format is 'command(arguments)'. The example for this is like this."
+
+Dayana "I can move to the left." [wait]moveChar(left)
+
+"Also to the right." [wait]moveChar(right)
+
+"And back to the left again" [wait]moveChar(left)
+
+"it's good to manipulate the character directly from the dialogue files."
+
+"I think that's all. For the rest of other function that our creator have's finished yet, like controlling our body, expression and our position, is not finished yet so we can't show it."
