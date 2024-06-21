@@ -112,3 +112,12 @@ MonoBehaviour:
     dialogueFont: {fileID: 11400000, guid: 8bd2fb59160e8e3479f4b95f1eab5861, type: 2}
     nameFontSize: 9
     dialogueFontSize: 8
+  - name: Buyer
+    alias: buyer
+    characterType: 0
+    nameColor: {r: 1, g: 1, b: 1, a: 1}
+    dialogueColor: {r: 1, g: 1, b: 1, a: 1}
+    nameFont: {fileID: 11400000, guid: 8bd2fb59160e8e3479f4b95f1eab5861, type: 2}
+    dialogueFont: {fileID: 11400000, guid: 8bd2fb59160e8e3479f4b95f1eab5861, type: 2}
+    nameFontSize: 9
+    dialogueFontSize: 8

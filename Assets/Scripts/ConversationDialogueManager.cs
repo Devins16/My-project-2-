@@ -250,8 +250,8 @@ public class ConversationDialogueManager : MonoBehaviour
         Dad.Show();
 
         Mom.SetPosition(new Vector2(0.5f, 0));
-        Mom.TransitionSprite(Dad.GetSprite("body"));
-        Mom.TransitionSprite(Dad.GetSprite("smile"), layer: 1);
+        Mom.TransitionSprite(Mom.GetSprite("body"));
+        Mom.TransitionSprite(Mom.GetSprite("smile"), layer: 1);
         Mom.FaceRight();
         Mom.Show();
 
@@ -602,7 +602,7 @@ public class ConversationDialogueManager : MonoBehaviour
         AudioManager1.instance.PlayTrack("Audio/Music/Backsound Awal/peritune village", channel: 0, loop: true, volumeCap: 0.5f);
         AudioManager1.instance.PlayTrack("Audio/Ambience/marketsibuk", channel: 1, loop: true, volumeCap: 2);
 
-        Dayana.SetPosition(new Vector2(0.5f, 0.2f));
+        Dayana.MoveToPosition(new Vector2(0.5f, 0.2f), smooth: true);
         Dayana.TransitionSprite(Dayana.GetSprite("01"));
         Dayana.TransitionSprite(Dayana.GetSprite("01 hah"), layer: 1);
         Dayana.Show();
